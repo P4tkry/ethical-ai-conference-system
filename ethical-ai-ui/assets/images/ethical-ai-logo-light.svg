@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Warstwa_2" data-name="Warstwa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 480.27 171.25">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-2 {
+        fill: url(#Gradient_bez_nazwy_109-2);
+      }
+
+      .cls-3 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-4 {
+        fill: url(#Gradient_bez_nazwy_109-3);
+      }
+
+      .cls-5 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-6 {
+        letter-spacing: .02em;
+      }
+
+      .cls-7 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-8 {
+        fill: url(#Gradient_bez_nazwy_109-5);
+      }
+
+      .cls-9 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-10 {
+        fill: url(#Gradient_bez_nazwy_109);
+      }
+
+      .cls-11 {
+        fill: url(#Gradient_bez_nazwy_109-4);
+      }
+
+      .cls-12 {
+        fill: #fff;
+        font-family: Inter-Bold, Inter;
+        font-size: 40px;
+        font-variation-settings: 'opsz' 14, 'wght' 700;
+        font-weight: 700;
+      }
+    </style>
+    <linearGradient id="Gradient_bez_nazwy_109" data-name="Gradient bez nazwy 109" x1="-29.92" y1="110.11" x2="207.16" y2="17.91" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f9c41c"/>
+      <stop offset=".03" stop-color="#e8c125"/>
+      <stop offset=".09" stop-color="#bebc3f"/>
+      <stop offset=".17" stop-color="#7bb368"/>
+      <stop offset=".24" stop-color="#35ab93"/>
+      <stop offset=".35" stop-color="#3cb1b6"/>
+      <stop offset=".49" stop-color="#49bcec"/>
+      <stop offset=".71" stop-color="#fbae53"/>
+      <stop offset=".87" stop-color="#f05a89"/>
+      <stop offset="1" stop-color="#9770b1"/>
+    </linearGradient>
+    <linearGradient id="Gradient_bez_nazwy_109-2" data-name="Gradient bez nazwy 109" x1="-7.42" y1="167.95" x2="229.65" y2="75.75" xlink:href="#Gradient_bez_nazwy_109"/>
+    <linearGradient id="Gradient_bez_nazwy_109-3" data-name="Gradient bez nazwy 109" x1="15.07" y1="225.79" x2="252.14" y2="133.59" xlink:href="#Gradient_bez_nazwy_109"/>
+    <linearGradient id="Gradient_bez_nazwy_109-4" data-name="Gradient bez nazwy 109" x1="-13.7" y1="151.8" x2="223.37" y2="59.61" xlink:href="#Gradient_bez_nazwy_109"/>
+    <linearGradient id="Gradient_bez_nazwy_109-5" data-name="Gradient bez nazwy 109" x1="-21.48" y1="131.79" x2="215.59" y2="39.6" xlink:href="#Gradient_bez_nazwy_109"/>
+  </defs>
+  <g id="Warstwa_1-2" data-name="Warstwa 1">
+    <g>
+      <g>
+        <polygon class="cls-10" points="173.48 4.11 185.33 34.55 233.53 34.55 233.53 4.11 173.48 4.11"/>
+        <polygon class="cls-2" points="209.43 96.45 233.53 96.45 233.53 66.01 197.58 66.01 209.43 96.45"/>
+        <polygon class="cls-4" points="233.53 158.36 233.53 127.92 221.68 127.92 233.53 158.36"/>
+        <polygon class="cls-11" points="120.84 4.11 180.89 158.36 214.68 158.36 154.63 4.11 120.84 4.11"/>
+        <polygon class="cls-8" points="60.05 4.11 0 158.36 36.93 158.36 78.49 45.38 120.05 158.36 156.99 158.36 96.93 4.11 60.05 4.11"/>
+      </g>
+      <text class="cls-12" transform="translate(243.12 158.36)"><tspan x="0" y="0">2025</tspan></text>
+      <text class="cls-12" transform="translate(243.12 96.45)"><tspan x="0" y="0">E</tspan><tspan class="cls-6" x="24.3" y="0">t</tspan><tspan class="cls-7" x="39.82" y="0">y</tspan><tspan class="cls-9" x="63.18" y="0">c</tspan><tspan x="85.92" y="0">zne AI</tspan></text>
+      <text class="cls-12" transform="translate(243.12 34.55)"><tspan class="cls-3" x="0" y="0">K</tspan><tspan x="27.19" y="0">on</tspan><tspan class="cls-5" x="76.62" y="0">f</tspan><tspan x="91.68" y="0">e</tspan><tspan class="cls-1" x="115.51" y="0">r</tspan><tspan x="130.82" y="0">encja</tspan></text>
+    </g>
+  </g>
+</svg>
