@@ -1,5 +1,11 @@
 {
   "HomePage": {
     "title": "Witamy w Ethical AI"
+  },
+  "navbar": {
+    "agenda": "Agenda wydarzenia",
+    "team": "Prelegenci i organizatorzy",
+    "aboutEvent": "O wydarzeniu",
+    "register": "Dołącz do wydarzenia"
   }
 }

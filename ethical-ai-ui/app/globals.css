@@ -8,6 +8,20 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+@theme {
+  --color-primary: #2cac93;
+  --color-secondary: #f05989;
+
+
+  --color-ai-yellow: #f9c41b;
+  --color-ai-blue: #47bded;
+  --color-ai-green: #2cac93;
+  --color-ai-red: #f05989;
+  --color-ai-purple: #9770b1;
+  --color-ai-orange: #faae53;
+  --color-ai-darkb: #2b4c7e;
+
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -27,4 +41,25 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.underline-animation {
+  position: relative;
+}
+
+.underline-animation::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.underline-animation:hover::after {
+  transform: scaleX(1);
 }

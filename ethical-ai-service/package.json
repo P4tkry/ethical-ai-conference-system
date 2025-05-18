@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx directus start"
+    "start": "npx directus start",
+    "snapshot": "npx directus schema snapshot ./snapshot.yaml"
   },
   "keywords": [],
   "author": "",
