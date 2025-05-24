@@ -22,11 +22,11 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body
-            className={`${interSans.variable} antialiased min-h-screen`}
+            className={`${interSans.variable} antialiased min-h-screen dark`}
         >
         <Providers>
             <NavBar />
-            <main className={'max-w-5xl mx-auto'}>
+            <main className={'mx-auto'}>
                 {children}
             </main>
 

@@ -3,10 +3,9 @@
 @plugin '../hero.ts';
 @source '../node_modules/@heroui/theme/dist';
 
-@custom-variant dark (&:is(.dark *));
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 @theme {
   --color-primary: #2cac93;
@@ -30,12 +29,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
@@ -62,4 +55,9 @@ body {
 
 .underline-animation:hover::after {
   transform: scaleX(1);
+}
+
+
+.margin{
+  @apply max-w-5xl mx-auto px-3;
 }

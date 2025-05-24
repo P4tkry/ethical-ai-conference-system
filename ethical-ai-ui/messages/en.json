@@ -1,5 +1,33 @@
 {
   "HomePage": {
-    "title": "Welcome w Ethical AI"
+    "freeEvent": "Free event",
+    "eventDate": "June 17, 2025",
+    "eventLocation": "Łódź Special Economic Zone",
+    "joinMessage": "Join and learn how you can use AI in your company/startup",
+    "registerButton": "Register for the event",
+    "timeToEvent": "Time left until the event:",
+    "days": "DAYS",
+    "hours": "HOURS",
+    "minutes": "MINUTES",
+    "seconds": "SECONDS"
+  },
+  "navbar": {
+    "aboutEvent": "About the event",
+    "team": "Team",
+    "agenda": "Agenda",
+    "register": "Register"
+  },
+  "Speakers": {
+    "title": "Speakers"
+  },
+  "AboutEvent": {
+    "title": "About the event",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."
+  },
+  "ForWhom": {
+    "title": "For whom?",
+    "description": "The event is dedicated to all AI enthusiasts, developers, scientists, students, and young entrepreneurs who want to bring their products to market and develop innovative technologies. Regardless of your skill level, there's something for everyone!",
+    "registerButton": "Register now",
+    "joinMessage": "Join us and discover the future of technology!"
   }
 }

@@ -1,13 +1,73 @@
-'use client'
-import {useTranslations} from "use-intl";
-import {Button} from "@heroui/react";
-import {Avatar, Calendar} from "@heroui/react";
+import LandingPage from "@/app/LandingPage";
+import {directus, ensureFullUrl} from "@/utils/directus";
+import {readItems} from "@directus/sdk";
+import Partners from "@/app/Partners";
+import Speakers from "@/app/Speakers";
+import {getLocale, getTranslations} from "next-intl/server";
+import Link from "next/link";
+import WhereToFindUs from "@/app/WhereToFindUs";
+export default async function Home() {
+    const partners = (await directus.request<{ id: number; name: string; logo: string; link: string }[]>(
+        readItems("partners")
+    )).map((partner) => ({
+        ...partner,
+        logo: ensureFullUrl(partner.logo),
+    }));
 
-export default function Home() {
-  const t = useTranslations("HomePage");
-  return (
-      <div >
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam, deserunt dicta distinctio eius eos, error fugit impedit ipsa libero minus possimus quam quibusdam quo sed similique, tempora tenetur totam ullam voluptate. Deserunt quae ratione ut vitae voluptates. Ab amet commodi consequatur cupiditate delectus deserunt dolore doloremque dolorum expedita fuga illum ipsum itaque libero maiores molestiae neque nobis odio quam quasi quia quo ratione reiciendis, rem repellat tempore voluptatem voluptatibus. Adipisci aliquid beatae dolorum esse, est impedit ipsam magni neque nisi non nulla optio placeat qui rerum unde. A accusamus aliquam aliquid amet animi aperiam aspernatur beatae culpa cum deserunt dolorum est excepturi hic laboriosam maxime, modi porro quae, quam recusandae reiciendis sit temporibus vero voluptates! Asperiores atque beatae, corporis cumque esse ex labore libero molestias mollitia, neque nulla, obcaecati odit rerum sit suscipit? A, accusamus animi architecto debitis dolores eligendi error esse et fugiat hic illum, incidunt iure iusto molestias necessitatibus neque nostrum omnis optio porro quibusdam quidem quos sapiente, similique sint ut voluptates voluptatum? Ab adipisci alias at commodi corporis culpa dicta dignissimos eaque eius, enim eum laboriosam laborum minima nisi nulla numquam officia placeat praesentium provident quaerat quibusdam quos repellat similique tempora veritatis! Aut earum fuga nostrum quaerat repellendus. A accusantium, adipisci architecto asperiores deleniti deserunt dolore eaque, eligendi esse et eum eveniet excepturi fuga fugiat fugit illo impedit labore nemo nisi numquam obcaecati quae qui quo recusandae sint velit voluptas! A asperiores beatae commodi delectus eligendi libero natus odit, perspiciatis porro qui, ratione rem repellat sequi sit, sunt ullam ut. Aliquam atque, blanditiis consequatur, earum eligendi esse et hic nisi pariatur provident rerum, vero. Ab, accusantium aliquid aperiam asperiores aspernatur commodi consequatur dignissimos distinctio dolor dolorem dolores earum eligendi excepturi exercitationem explicabo id in labore laboriosam laborum libero maiores modi mollitia nostrum odio perspiciatis porro possimus provident quae, quaerat quas ratione sapiente tenetur unde vel velit veritatis vitae! Alias blanditiis cum dignissimos eius hic modi odit porro quos tempore voluptate. Accusamus consequuntur impedit incidunt itaque iusto labore, libero nihil, obcaecati placeat provident quibusdam reiciendis sequi similique vitae voluptas. Ad animi beatae eum ex illum ipsam, libero nemo obcaecati pariatur praesentium qui quia reprehenderit velit. Assumenda blanditiis culpa cum facere id, libero numquam perferendis placeat ratione recusandae repudiandae rerum, suscipit ullam ut veritatis. Animi, optio quisquam? Asperiores ducimus expedita fugit impedit, incidunt iste itaque molestias porro sapiente temporibus veritatis voluptate, voluptatem. Accusantium consectetur ea et excepturi facilis, fuga, id ipsam natus, nihil perferendis quasi saepe soluta sunt suscipit veritatis voluptate voluptates voluptatibus. Accusamus aliquid amet aspernatur atque consequatur cumque dicta eius et fugit impedit iusto laudantium magni minima minus modi natus necessitatibus nihil non nulla odit officia, omnis optio placeat quae qui quos recusandae rerum sed sequi soluta suscipit tenetur totam veniam veritatis vero voluptatem voluptatibus. Architecto dolor, eveniet ex explicabo fugit illum incidunt ipsum magni nemo odio provident ratione sapiente ullam? A amet animi aspernatur at doloremque ducimus eaque eligendi, excepturi expedita hic itaque laudantium nemo nesciunt nulla odio, perferendis placeat quidem quis repellat repellendus reprehenderit soluta vel voluptates. Accusantium consectetur doloribus earum fugit hic ipsam iusto magni natus numquam reprehenderit. Dolorem doloremque, eveniet incidunt labore ut velit? Consequatur dicta facere incidunt odio temporibus, ut voluptatibus! Accusantium atque dicta distinctio, eum fuga fugiat incidunt iure laborum maxime mollitia nemo nostrum nulla omnis perspiciatis quam reiciendis sapiente similique temporibus ullam voluptate. Autem blanditiis corporis delectus dolor dolorem molestiae odio temporibus voluptatibus. Alias, animi debitis dignissimos, eveniet harum in iure laborum magnam neque nostrum, optio repellendus tempora tempore vero vitae. Enim fuga ipsam nam, quibusdam sint vero. At beatae deleniti, dolorum eveniet facere harum ipsum maxime mollitia nam nostrum quam quas quasi quidem repellendus sit soluta suscipit! A adipisci atque consequuntur dolore dolorum est, expedita id quia quibusdam voluptate! Dolor harum laborum nesciunt pariatur quia. Esse, labore quaerat. Accusantium debitis, dolore harum ratione reiciendis sint. Blanditiis, commodi, repellat. Architecto blanditiis, consectetur cupiditate deleniti dicta illo incidunt ipsum molestiae non praesentium quibusdam sed sit totam ut, vel veniam voluptatum. Ab aliquid architecto asperiores atque autem beatae consequatur consequuntur excepturi harum impedit incidunt iste iusto labore laborum laudantium obcaecati, optio quisquam recusandae repellendus reprehenderit sit vitae, voluptas voluptatem. Dolor, ea, laboriosam? Ab ad aliquid, asperiores atque corporis culpa dolor ea earum error facilis laboriosam mollitia pariatur quae rem sapiente, similique tenetur totam ullam ut vero. Ad alias aperiam, asperiores, assumenda harum id itaque libero magni natus neque nisi optio provident quos reprehenderit repudiandae ut, vero. Aperiam atque cupiditate doloribus enim esse fugit libero magnam neque nobis nulla omnis placeat quam, quo sapiente sint tempore vel vitae voluptates! Aspernatur atque consequatur consequuntur, corporis cum deleniti dignissimos dolore dolores dolorum eius enim ex, excepturi, exercitationem expedita facere hic iure modi nam nulla optio pariatur perspiciatis possimus quam qui quibusdam quod sequi suscipit veniam vitae voluptatum? Aliquam dicta doloremque ea eius eveniet impedit obcaecati quasi, quidem soluta unde? Ad architecto, debitis ducimus exercitationem illum obcaecati quibusdam quisquam quod repellendus repudiandae saepe similique sunt ullam. Ea esse ipsum labore natus optio quibusdam. Blanditiis dicta ea earum in incidunt labore maxime nesciunt quasi tenetur voluptatum. Architecto aut dolore eius eveniet incidunt inventore labore nisi odio placeat qui, quisquam ratione recusandae, saepe. Ab ad, asperiores autem commodi cumque ea enim facere harum ipsa laborum maxime minus neque nesciunt nihil nobis non numquam provident qui repellat repellendus repudiandae sapiente sint vero vitae voluptates? Ab adipisci asperiores, blanditiis cum distinctio, dolore eaque exercitationem fuga fugit, inventore itaque labore laboriosam laborum natus nesciunt quaerat quidem quisquam quo recusandae repellat sapiente sint tempora tempore ullam unde veritatis voluptate. Asperiores dolorum eligendi explicabo illo illum laboriosam natus pariatur voluptatem, voluptates? Aspernatur cupiditate dignissimos, eaque eius facere fugit id ipsam iusto laudantium molestias natus nesciunt, officia quia sequi voluptate. Ab animi blanditiis debitis dolorum eos excepturi ipsam, laudantium maxime nam, placeat quae quam quas soluta vel veritatis voluptates voluptatibus? Amet at corporis enim eos, eum magnam maiores provident reprehenderit sequi voluptatem? Accusamus adipisci aliquid animi aperiam consequuntur distinctio dolorum excepturi magni molestias, nam omnis quaerat quibusdam, ratione reprehenderit repudiandae vel vitae voluptas?
-      </div>
-  )
+    const speakers = (await directus.request<{
+        id: number;
+        name: string;
+        description: string,
+        description_en: string,
+        photo: string,
+        tags: string[],
+        link: string
+    }[]>(readItems("speakers"))).map((speaker) => ({
+        ...speaker,
+        photo: ensureFullUrl(speaker.photo),
+    }));
+
+    const t = await getTranslations();
+
+
+    return (
+        <div>
+            <div className={'margin'}>
+                <LandingPage/>
+            </div>
+            <div className={'bg-white'}>
+                <Partners partners={partners}/>
+            </div>
+
+            <div className="margin mt-10">
+                <h2 className="text-3xl font-bold mb-4 sm:text-4xl lg:text-5xl">
+                    {t('AboutEvent.title')}
+                </h2>
+                <p className="text-lg sm:text-xl lg:text-2xl">
+                    {t('AboutEvent.content')}
+                </p>
+            </div>
+
+            <Speakers speakers={speakers}/>
+
+            <div className="mt-10 py-10 bg-gradient-to-r from-purple-500/40 via-pink-500/40 to-blue-500/40">
+                <div className="margin">
+                    <h2 className="text-3xl font-bold mb-4">{t("ForWhom.title")}</h2>
+                    <p className="text-lg mb-6">{t("ForWhom.description")}</p>
+                    <div className="flex flex-col sm:flex-row items-start gap-4">
+                        <Link
+                            href="/register"
+                            className="inline-block bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-transform"
+                        >
+                            {t("ForWhom.registerButton")}
+                        </Link>
+                        <span className="text-sm text-white">{t("ForWhom.joinMessage")}</span>
+                    </div>
+                </div>
+            </div>
+
+            <WhereToFindUs/>
+
+        </div>
+    );
 }

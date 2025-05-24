@@ -1,11 +1,33 @@
 {
   "HomePage": {
-    "title": "Witamy w Ethical AI"
+    "freeEvent": "Darmowe wydarzenie",
+    "eventDate": "17 czerwca 2025",
+    "eventLocation": "Łódzka Specjalna Strefa Ekonomiczna",
+    "joinMessage": "Dołącz i dowiedz się jak Ty możesz wykorzystywać AI w twojej firmie/startupie",
+    "registerButton": "Zapisz się na wydarzenie",
+    "timeToEvent": "Do wydarzenia pozostało:",
+    "days": "DNI",
+    "hours": "GODZIN",
+    "minutes": "MINUT",
+    "seconds": "SEKUND"
   },
   "navbar": {
-    "agenda": "Agenda wydarzenia",
-    "team": "Prelegenci i organizatorzy",
     "aboutEvent": "O wydarzeniu",
-    "register": "Dołącz do wydarzenia"
+    "team": "Zespół",
+    "agenda": "Agenda",
+    "register": "Zarejestruj się"
+  },
+  "Speakers": {
+    "title": "Prelegenci"
+  },
+  "AboutEvent": {
+    "title": "O wydarzeniu",
+    "content": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."
+  },
+  "ForWhom": {
+    "title": "Dla kogo?",
+    "description": "Wydarzenie jest dedykowane dla wszystkich pasjonatów sztucznej inteligencji, programistów, naukowców, studentów oraz młodych przedsiębiorców, którzy chcą wprowadzać swoje produkty na rynek i rozwijać innowacyjne technologie. Niezależnie od poziomu zaawansowania, każdy znajdzie coś dla siebie!",
+    "registerButton": "Zarejestruj się teraz",
+    "joinMessage": "Dołącz do nas i odkryj przyszłość technologii!"
   }
 }

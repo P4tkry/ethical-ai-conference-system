@@ -1,17 +1,13 @@
 'use client';
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@heroui/navbar";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/navbar";
 import NextLink from "next/link";
 
 import LogoLight from "@/assets/images/ethical-ai-logo-light.svg";
-import LogoDark from "@/assets/images/ethical-ai-logo-dark.svg";
-
 import LogoLightEn from "@/assets/images/ethical-ai-logo-light-en.svg";
-import LogoDarkEn from "@/assets/images/ethical-ai-logo-dark-en.svg";
 import Image from "next/image";
-import {NavbarMenuToggle, Link, Button, NavbarMenu, NavbarMenuItem} from "@heroui/react";
-import {useTranslations, useLocale} from "use-intl";
-import {getLocale} from "next-intl/server";
-import {FaRegCalendarCheck} from "react-icons/fa";
+import { NavbarMenuToggle, Link, Button, NavbarMenu, NavbarMenuItem } from "@heroui/react";
+import { useTranslations, useLocale } from "use-intl";
+import { FaRegCalendarCheck } from "react-icons/fa";
 
 export default function NavBar() {
     const t = useTranslations('navbar');
@@ -20,18 +16,17 @@ export default function NavBar() {
     return (
         <Navbar height={90} maxWidth={'xl'}>
             <NavbarContent className="md:hidden" justify="start">
-                <NavbarMenuToggle className={'cursor-pointer'}/>
+                <NavbarMenuToggle className={'cursor-pointer'} />
             </NavbarContent>
 
-            <NavbarContent >
-                <NavbarBrand className={'w-full flex justify-end md:justify-start'} >
+            <NavbarContent>
+                <NavbarBrand className={'w-full flex justify-end md:justify-start'}>
                     <NextLink href="/" className="text-xl font-bold">
-
-                        <Image src={locale ==='pl'?LogoLight:LogoLightEn} alt={'Ethical AI Logo'}
-                               className={"hidden dark:inline-block h-14 w-fit"}/>
-                        <Image src={locale ==='pl'?LogoDark:LogoDarkEn} alt={'Ethical AI Logo'}
-                               className={"inline-block dark:hidden h-14 w-fit"}/>
-
+                        <Image
+                            src={locale === 'pl' ? LogoLight : LogoLightEn}
+                            alt={'Ethical AI Logo'}
+                            className={"h-14 w-fit"}
+                        />
                     </NextLink>
                 </NavbarBrand>
             </NavbarContent>
@@ -55,29 +50,32 @@ export default function NavBar() {
             </NavbarContent>
 
             <NavbarContent className="hidden md:flex gap-4" justify="end">
-
-
-
                 <Button
                     as={NextLink}
                     href="/register"
                     color="secondary"
                     variant="shadow"
-                    className="px-3 lg:px-6 py-2 text-xs lg:text-sm font-semibold bg-gradient-to-l from-ai-blue via-ai-purple to-ai-red text-white"
+                    className="px-3 lg:px-6 py-2 text-xs lg:text-sm font-semibold bg-gradient-to-l from-ai-blue via-ai-purple to-ai-red text-white transition-transform duration-300 hover:scale-95"
                 >
                     {t('register')}
                 </Button>
             </NavbarContent>
 
             <NavbarMenu className={'space-y-4 py-6'}>
-                <NavbarMenuItem >
-                    <Link href="/agenda" color={'foreground'} className={'text-2xl font-semibold underline-animation'} >{t('agenda')}</Link>
+                <NavbarMenuItem>
+                    <Link href="/agenda" color={'foreground'} className={'text-2xl font-semibold underline-animation'}>
+                        {t('agenda')}
+                    </Link>
                 </NavbarMenuItem>
                 <NavbarMenuItem>
-                    <Link href="/team" color={'secondary'} className={'text-2xl font-semibold underline-animation'}>{t('team')}</Link>
+                    <Link href="/team" color={'secondary'} className={'text-2xl font-semibold underline-animation'}>
+                        {t('team')}
+                    </Link>
                 </NavbarMenuItem>
                 <NavbarMenuItem>
-                    <Link href="/about-event" color={'foreground'} className={'text-2xl font-semibold underline-animation'}>{t('aboutEvent')}</Link>
+                    <Link href="/about-event" color={'foreground'} className={'text-2xl font-semibold underline-animation'}>
+                        {t('aboutEvent')}
+                    </Link>
                 </NavbarMenuItem>
                 <NavbarMenuItem className={'mt-5'}>
                     <Button
@@ -92,7 +90,6 @@ export default function NavBar() {
                     </Button>
                 </NavbarMenuItem>
             </NavbarMenu>
-
         </Navbar>
     );
 }
